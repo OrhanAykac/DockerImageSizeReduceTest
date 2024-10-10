@@ -1,7 +1,10 @@
-# See https://aka.ms/customizecontainer to learn how to customize your debug container and how Visual Studio uses this Dockerfile to build your images for faster debugging.
+#107MB
+#FROM mcr.microsoft.com/dotnet/aspnet:8.0-alpine AS base
+#109MB
+#FROM mcr.microsoft.com/dotnet/aspnet:8.0-jammy-chiseled AS base
+#102 MB
+FROM mcr.microsoft.com/dotnet/aspnet:8.0-jammy-chiseled-composite AS base
 
-# This stage is used when running from VS in fast mode (Default for Debug configuration)
-FROM mcr.microsoft.com/dotnet/aspnet:8.0-alpine AS base
 USER app
 WORKDIR /app
 EXPOSE 8080
